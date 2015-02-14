@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nowin_bucket_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.coloryourmap.nowin_bucket" >
+    
+    <RelativeLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/title_nowin_bucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit somewhere"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+            
+        <Button
+        	android:id="@+id/btn_nowin_bucket_accomp"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:text="Accomp!" />
+	</RelativeLayout>
+	
+	<RelativeLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/title_nowin_bucket2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do sth"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+            
+        <Button
+        	android:id="@+id/btn_nowin_bucket_accomp"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:text="Accomp!" />
+	</RelativeLayout>
+    
+</LinearLayout>

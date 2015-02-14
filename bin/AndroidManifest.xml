@@ -26,6 +26,10 @@
             android:name=".LogoSplash"
             android:label="@string/title_activity_logo_splash" >
         </activity>
+        <activity
+            android:name=".NowinBucketActivity"
+            android:label="@string/title_activity_nowin_bucket" >            
+        </activity> 
     </application>
 
 </manifest>
