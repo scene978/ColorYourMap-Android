@@ -2,11 +2,13 @@ package com.example.coloryourmap;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -71,24 +73,41 @@ public class MainActivity extends Activity {
 	// DrawerItemClickListener
 	private class DrawerItemClickListener implements
 			ListView.OnItemClickListener {
-
 		@Override
-		public void onItemClick(AdapterView<?> adapter, View view,
-				int position, long id) {
-			Fragment fragment = null;
-			switch (position) {
-			case 0:
-				fragment = new bfTravelFragment();
-				break;
-			case 1:
-				fragment = new afTravelFragment();
-				break;
-			case 2:
-				fragment = new SettingsFragment();
-				break;
-			}
-			dlDrawer.closeDrawer(menuList);
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			// display view for selected nav drawer item
+			displayView(position);
 		}
+	}
+
+	/**
+	 * Diplaying fragment view for selected nav drawer list item
+	 * */
+	private void displayView(int position) {
+		// update the main content by replacing fragments
+		switch (position) {
+		case 0:
+			Intent intent1 = new Intent(this, BeforeTravelActivity.class);
+			startActivity(intent1);
+			finish();
+			break;
+		case 1:
+			Intent intent2 = new Intent(this, AfterTravelActivity.class);
+			startActivity(intent2);
+			finish();
+			break;
+		case 2:
+			Intent intent3 = new Intent(this, SettingsActivity.class);
+			startActivity(intent3);
+			finish();
+			break;
+		}
+            // update selected item and title, then close the drawer
+            menuList.setItemChecked(position, true);
+            menuList.setSelection(position);
+            setTitle(navItems[position]);
+            dlDrawer.closeDrawer(menuList);
 	}
 
 	@Override

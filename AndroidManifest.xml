@@ -3,6 +3,8 @@
     package="com.example.coloryourmap"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <supports-screens android:largeScreens="true" android:anyDensity="true" />
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -29,7 +31,11 @@
         <activity
             android:name=".NowinBucketActivity"
             android:label="@string/title_activity_nowin_bucket" >            
-        </activity> 
+        </activity>
+        <activity android:name="BeforeTravelActivity"></activity>
+        <activity android:name="AfterTravelActivity"></activity>
+        <activity android:name="SettingsActivity"></activity>
+        <activity android:name="AddPlanActivity"></activity> 
     </application>
 
 </manifest>

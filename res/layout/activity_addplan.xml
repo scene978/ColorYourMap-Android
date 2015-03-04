@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/title_activity_add_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="여행 제목  "
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_plan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/title_activity_add_plan"
+            android:layout_toRightOf="@+id/title_activity_add_plan"
+            android:hint="여행 제목을 입력하세요                       "
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <!-- Text Label -->
+
+        <TextView
+            android:id="@+id/traveling_country"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_below="@+id/edit_plan_title"
+            android:text="여행 국가 " />
+
+        <!-- Spinner Element -->
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_below="@+id/traveling_country"
+            android:prompt="@string/spinner_title" />
+
+        <TextView
+            android:id="@+id/start_date_add_plan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="출발 날짜  "
+            android:textSize="20sp" />
+
+        <DatePicker
+            android:id="@+id/datepicker_startdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/start_date_add_plan"
+            android:calendarViewShown="false"
+            android:spinnersShown="true" />
+
+        <TextView
+            android:id="@+id/end_date_add_plan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datepicker_startdate"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="도착 날짜  "
+            android:textSize="20sp" />
+
+        <DatePicker
+            android:id="@+id/datepicker_enddate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/end_date_add_plan"
+            android:calendarViewShown="false"
+            android:spinnersShown="true" />
+
+        <TextView
+            android:id="@+id/checklist_add_plan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datepicker_enddate"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="체크리스트  "
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checklist_add_plan"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edit_checklist_addplan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="체크리스트 항목을 입력하세요"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btn_add_checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_delete_checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_checklist_addplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout3"
+            android:choiceMode="multipleChoice" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/bucketlist_add_plan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_checklist_addplan"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="버킷리스트  "
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bucketlist_add_plan"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edit_bucketlist_addplan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="버킷리스트 항목을 입력하세요"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btn_add_bucketlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_delete_bucketlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_bucketlist_addplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout4"
+            android:choiceMode="multipleChoice" >
+        </ListView>
+        
+        <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_bucketlist_addplan"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="저장" />
+        
+        <Button
+                android:id="@+id/button_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_toRightOf="@+id/button_save"
+                android:layout_below="@+id/list_bucketlist_addplan"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="GO" />
+        
+        
+    </RelativeLayout>
+
+</ScrollView>

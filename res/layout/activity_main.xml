@@ -16,11 +16,12 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.coloryourmap.MainActivity" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="5dp" >
 
         <ImageView
             android:id="@+id/main_map"
@@ -33,85 +34,81 @@
             android:id="@+id/now_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/main_map"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
             android:background="#AFEEEE"
-            android:padding="10dp"
             android:singleLine="true"
             android:text="Now in Germany"
             android:textSize="30dp" />
 
-        
         <LinearLayout
+            android:id="@+id/linearlayout1"
             android:layout_width="fill_parent"
             android:layout_height="180dp"
+            android:layout_below="@id/now_in"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <ImageButton
                 android:id="@+id/button_diary"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/diary" />
-
+            
+            
             <ImageButton
                 android:id="@+id/button_check"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_alignTop="@id/button_diary"
+                android:layout_toRightOf="@id/button_diary"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/checklist" />
-        </LinearLayout>
-
+            </LinearLayout>
+            
         <LinearLayout
+            android:id="@+id/linearlayout2"
             android:layout_width="fill_parent"
             android:layout_height="180dp"
+            android:layout_below="@id/linearlayout1"
             android:gravity="center"
             android:orientation="horizontal" >
+        
 
             <ImageButton
                 android:id="@+id/button_bucketlist"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_below="@id/button_diary"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bucket" />
 
             <ImageButton
                 android:id="@+id/button_expenditure"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_alignTop="@id/button_bucketlist"
+                android:layout_toRightOf="@id/button_bucketlist"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/money" />
         </LinearLayout>
-         
 
         <!--
         <Button
@@ -123,19 +120,19 @@
             android:background="#F0FFFF"
             android:text="여행계획을 세워보세요!"
             android:textSize="30sp" />
-            -->
-       
+        -->
 
         <Button
             android:id="@+id/go_home"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_below="@id/linearlayout2"
             android:background="#AFEEEE"
             android:padding="10dp"
             android:text="Go Home"
             android:textSize="30sp" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <!-- Listview to display slider menu -->
 
